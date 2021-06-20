@@ -1,0 +1,37 @@
+.footerTab{
+    width: 500px;
+    margin: 0 auto;
+    list-style-type: none;
+    background: #FFFFFF;
+    box-shadow: 0 5px 15px 0 rgba(0,0,0,0.15);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-left: 0px;
+}
+.footerTab ul{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    margin-top: 0;
+}
+.sum__num{
+    font-family: NotoSansCJKtc-Regular;
+    font-size: 14px;
+    letter-spacing: 0.7px;
+    margin-left: 24px;
+    margin-right: 70px;
+    padding-top: 24px;
+    padding-bottom: 32px;
+    width: 103px
+}
+.clean__all{
+    font-family: NotoSansCJKtc-Regular;
+    font-size: 14px;
+    letter-spacing: 0.7px;
+    color: #9F9A91;
+    padding-top: 24px;
+    padding-bottom: 32px;
+    padding-left: 155px;
+    padding-right: 45px;
+    cursor: pointer;
+}

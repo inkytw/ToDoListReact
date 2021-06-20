@@ -1,0 +1,38 @@
+/* tab list */
+.tab_list{
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    list-style-type: none;
+    background: #FFFFFF;
+    box-shadow: 0 5px 15px 0 rgba(0,0,0,0.15);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding-left: 0px;
+}
+/* tabs */
+.tab{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    cursor: pointer;
+}
+.tab li{
+    width: 166px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: NotoSansCJKtc-Bold;
+    font-size: 14px;
+    letter-spacing: 0.7px;
+}
+.tab__selected{
+    border-bottom: 2px solid #333333;
+    color: #333333;
+}
+.tab__unselected{
+    border-bottom: 2px solid #EFEFEF;
+    color: #9F9A91;
+}

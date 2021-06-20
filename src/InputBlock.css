@@ -1,0 +1,39 @@
+.todo_input-block{
+    display: flex;
+    background: #FFFFFF;
+    box-shadow: 0 0 15px 0 rgba(0,0,0,0.15);
+    border-radius: 10px;
+    width: 500px;
+    height: 48px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 8px;
+}
+.todo_input{
+    background: #FFFFFF;
+    border-radius: 10px;
+    border: none;
+    width: 426px;
+    height: 48px;
+    padding: 0;
+    padding-left: 24px;
+    font-family: NotoSansCJKtc-Regular;
+    font-size: 16px;
+    /* color: #9F9A91; */
+    letter-spacing: 0.7px;
+}
+.btn-new{
+    background: #333333;
+    border-radius: 10px;
+    border: none;
+    padding: 0;
+    margin-left: 4px;
+    margin-top: 4px;
+    width: 40px;
+    height: 40px;
+    font-family: NotoSansCJKtc-Medium;
+    color: #FFFFFF;
+    font-size: 32px;
+    line-height: 40px;
+    cursor: pointer;
+}

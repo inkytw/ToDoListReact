@@ -1,0 +1,81 @@
+/* todo list */
+.todo_list{
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    list-style-type: none;
+    background: #FFFFFF;
+    /* box-shadow: 0 5px 15px 0 rgba(0,0,0,0.15); */
+    padding-left: 0px;
+}
+
+.todo{
+    display: flex;
+}
+.todo:hover img{
+    visibility: visible;
+}
+.todo_check{
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    margin-top: 20px;
+    margin-left: 24px;
+    margin-right: 16px;
+}
+input[type="checkbox"]:checked{
+    display:none;
+}
+input[type="checkbox"] + label{
+    width: 20px;
+    height: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 24px;
+    padding-right: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #FFD370;
+    display:none;
+    text-decoration:none;
+    border-bottom: none;
+}
+input[type="checkbox"]:checked + label{
+    display:inline-block;
+}
+.todo label{
+    text-decoration:none;
+    display: inline-block;
+    width: 392px;
+    line-height: 59px;
+    border-bottom: 1px solid #EFEFEF;
+    margin-top: 0;
+    margin-left: 0;
+    text-align: left;
+    font-family: NotoSansCJKtc-Regular;
+    font-size: 16px;
+    color: #333333;
+    letter-spacing: 0.62px;
+}
+.todo__done label
+{
+    text-decoration:line-through;
+    color: rgba(51,51,51,0.30);
+    letter-spacing: 0.7px;
+}
+.btn-delete
+{
+    display: inline-block;
+    border: none;
+    padding: 0;
+    padding-right: 16px;
+    cursor: pointer;
+}
+.btn-delete-img{
+    width: 16px;
+    height: 16px;
+    margin-top: 22px;
+    margin-left: 16px;
+    pointer-events: none;
+    visibility: hidden;
+}
