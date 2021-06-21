@@ -1,5 +1,5 @@
 import './App.css';
-import { useEffect,useRef, useState } from 'react';
+import { useEffect,useState } from 'react';
 import InputBlock from './InputBlock';
 import Tabs from './Tabs';
 import TodoItems from './TodoItems';
@@ -12,7 +12,7 @@ function App() {
     {
       // "id" : 1,
       "task" : "待辦事項1",
-      "checked" : false
+      "checked" : true
     },
     {
       // "id" : 2,
@@ -24,11 +24,25 @@ function App() {
   /*-Hook設定--*/
   const [text, setText] = useState(listToDojson); // 存Todo列表的陣列
   const [currentTab, setCurrentTab] = useState('all'); // Tab位置(預設all)
-  const [currentToDoNum, setCurrentToDoNum] = useState(text.filter(text => text.checked != true).length);
+  const [currentToDoNum, setCurrentToDoNum] = useState(text.filter(text => text.checked !== true).length);
 
+  // //新增Todo前檢查是否有重複
+  // const checkTodorRepeat = (item) => {
+  //   if(text.find(text => text.task == item).length > 0){
+  //     return true;
+  //   }else{
+  //     return false;
+  //   }
+  // }
   // 新增Todo
   const addItem = (item) => {
-    setText(prev => ([...prev,item]));
+    // console.log(item.task);
+    // console.log(text.find(text => text.task == item.task));
+    if(text.find(text => text.task === item.task) !== undefined){
+      alert("Item repeat");
+    }else{
+      setText(prev => ([...prev,item]));
+    }
   }
   
   //checkBox改變Todo列表陣列

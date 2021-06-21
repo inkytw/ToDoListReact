@@ -13,10 +13,10 @@ function InputBlock(props) {
                 "checked" : false
             }
             props.addItem(item);
-            setValue([]);
+            setValue([]);   
         }
         else{
-            alert("Please input something")
+            alert("Please input something");
         }
     }
     const handleKeyDown = (event) => {
@@ -28,7 +28,9 @@ function InputBlock(props) {
                     "checked" : false
                 }
                 props.addItem(item);
-                setValue([]);
+                setValue([]);  
+            }else{
+                alert("Please input something");
             }
         }
       }

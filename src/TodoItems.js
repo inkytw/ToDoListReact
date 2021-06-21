@@ -1,10 +1,9 @@
 import './TodoItems.css';
-// import { useState } from 'react';
 import cancel from './images/cancel.jpg';
 import check from './images/check.jpg';
 
 function TodoItems(props) {
-    console.log(props);
+    // console.log(props);
     let checkID = 'c' + props.itemIndex;
 
     //呼叫上層刪除function
@@ -13,6 +12,7 @@ function TodoItems(props) {
       // console.log(e.target.id);
     }
 
+    //checkBox改變Todo列表陣列
     const boxChecked = (e) =>{
       props.boxChecked(e.target.id);
     }

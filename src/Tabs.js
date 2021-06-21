@@ -1,5 +1,4 @@
 import './Tabs.css';
-// import { useState } from 'react';
 
 function Tabs(props) {
   
