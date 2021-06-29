@@ -26,14 +26,6 @@ function App() {
   const [currentTab, setCurrentTab] = useState('all'); // Tab位置(預設all)
   const [currentToDoNum, setCurrentToDoNum] = useState(text.filter(text => text.checked !== true).length);
 
-  // //新增Todo前檢查是否有重複
-  // const checkTodorRepeat = (item) => {
-  //   if(text.find(text => text.task == item).length > 0){
-  //     return true;
-  //   }else{
-  //     return false;
-  //   }
-  // }
   // 新增Todo
   const addItem = (item) => {
     // console.log(item.task);
@@ -78,7 +70,7 @@ function App() {
             text.map(
               (item,index)=> {
                 item.id = index;
-                return <TodoItems key={`${item.task}${index}`} todoItems={item} itemIndex={index} boxChecked={boxChecked} deleteByID={deleteByID}/>;
+                return <TodoItems key={`${item.task}`} todoItems={item} itemIndex={index} boxChecked={boxChecked} deleteByID={deleteByID}/>;
               }
             )
           }
@@ -92,7 +84,7 @@ function App() {
             text.filter(text=>text.checked!=true).map(
               (item,index)=> {
                 item.id = index;
-                return <TodoItems key={`${item.task}${index}`} todoItems={item} itemIndex={index} boxChecked={boxChecked} deleteByID={deleteByID}/>;
+                return <TodoItems key={`${item.task}`} todoItems={item} itemIndex={index} boxChecked={boxChecked} deleteByID={deleteByID}/>;
               }
             )
           }
@@ -106,7 +98,7 @@ function App() {
             text.filter(text=>text.checked==true).map(
               (item,index)=> {
                 item.id = index;
-                return <TodoItems key={`${item.task}${index}`} todoItems={item} itemIndex={index} boxChecked={boxChecked} deleteByID={deleteByID}/>;
+                return <TodoItems key={`${item.task}`} todoItems={item} itemIndex={index} boxChecked={boxChecked} deleteByID={deleteByID}/>;
               }
             )
           }

@@ -1,6 +1,6 @@
 import './Tabs.css';
 
-function Tabs(props) {
+function Tabs(props){
   
   const tabSwitch = (e) =>{
     props.tabSwitch(e.target.id);

@@ -1,19 +1,21 @@
 import './InputBlock.css';
-import { useState } from 'react';
+import { useState,useRef,useEffect } from 'react';
 
 function InputBlock(props) {
 
-    const [value, setValue] = useState('');
+    const inputRef = useRef('');
+    // const [value, setValue] = useState('');
     //handle 點擊 or enter 事件
     const handleClick = (e) => {
-        if(value.length !== 0)
+        if(inputRef.current.value.length !== 0)
         {
+            console.log(inputRef.current.value);
             let item = {
-                "task": value,
+                "task": inputRef.current.value,
                 "checked" : false
             }
             props.addItem(item);
-            setValue([]);   
+            // setValue([]);   
         }
         else{
             alert("Please input something");
@@ -21,14 +23,15 @@ function InputBlock(props) {
     }
     const handleKeyDown = (event) => {
         if (event.key === 'Enter') {
-            if(value.length !== 0)
+            if(inputRef.current.value.length !== 0)
             {   
+                console.log(inputRef.current.value);
                 let item = {
-                    "task": value,
+                    "task": inputRef.current.value,
                     "checked" : false
                 }
                 props.addItem(item);
-                setValue([]);  
+                // setValue([]);  
             }else{
                 alert("Please input something");
             }
@@ -36,13 +39,19 @@ function InputBlock(props) {
       }
     
     // 拿到 input 的 value
-    const handleInputChange = (e) => {
-        setValue(e.target.value);
-    }
+    // const handleInputChange = (e) => {
+    //     setValue(e.target.value);
+    // }
+
+    useEffect(() => {
+        inputRef.current.value = "";
+    })
 
     return (
         <div className="todo_input-block">
-            <input className="todo_input" type="text" value={value} onChange={handleInputChange} onKeyDown={handleKeyDown} placeholder="新增待辦事項" minLength="1" maxLength="48"/>
+            <input className="todo_input" type="text" ref={inputRef}
+            // value={value} onChange={handleInputChange} 
+            onKeyDown={handleKeyDown} placeholder="新增待辦事項" minLength="1" maxLength="48"/>
             <button className="btn-new" onClick={handleClick}>+</button>
         </div>
     )  
