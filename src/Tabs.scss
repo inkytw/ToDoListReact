@@ -19,14 +19,14 @@
     padding: 0;
     text-align: center;
     cursor: pointer;
-}
-.tab li{
-    width: 166px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    font-family: NotoSansCJKtc-Bold;
-    font-size: 14px;
-    letter-spacing: 0.7px;
+    li{
+        width: 166px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-family: NotoSansCJKtc-Bold;
+        font-size: 14px;
+        letter-spacing: 0.7px;
+    }
 }
 .tab__selected{
     border-bottom: 2px solid #333333;

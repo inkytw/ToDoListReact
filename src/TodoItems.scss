@@ -57,12 +57,12 @@ input[type="checkbox"]:checked + label{
     color: #333333;
     letter-spacing: 0.62px;
 }
-.todo__done label
-{
-    text-decoration:line-through;
-    color: rgba(51,51,51,0.30);
-    letter-spacing: 0.7px;
-}
+// .todo__done label
+// {
+//     text-decoration:line-through;
+//     color: rgba(51,51,51,0.30);
+//     letter-spacing: 0.7px;
+// }
 .btn-delete
 {
     display: inline-block;

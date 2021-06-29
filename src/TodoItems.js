@@ -1,4 +1,4 @@
-import './TodoItems.css';
+import './TodoItems.scss';
 import cancel from './images/cancel.jpg';
 import check from './images/check.jpg';
 

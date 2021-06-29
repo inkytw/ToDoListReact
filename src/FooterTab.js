@@ -1,4 +1,4 @@
-import './FooterTab.css';
+import './FooterTab.scss';
 // import { useState } from 'react';
 
 function FooterTab(props) {

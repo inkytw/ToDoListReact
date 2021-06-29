@@ -1,4 +1,4 @@
-import './InputBlock.css';
+import './InputBlock.scss';
 import { useState,useRef,useEffect } from 'react';
 
 function InputBlock(props) {
